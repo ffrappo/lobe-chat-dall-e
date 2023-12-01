@@ -1,0 +1,7 @@
+{
+    "name": "DALL-E 3 Image Generator",
+    "description": "Generates images based on prompts using DALL-E 3.",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "main": "index.js"
+  }
