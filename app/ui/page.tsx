@@ -13,9 +13,9 @@ const Daje = memo(() => {
 
   return (
     <div>
-      <h1>Plugin Sent Message Data:</h1>
+      <h1>Here's your image:</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      <img src={data} />
+      <img src={data? data.image_url : 'https://user-images.githubusercontent.com/20684618/31289519-9ebdbe1a-aae6-11e7-8f82-bf794fdd9d1a.png'} />
     </div>
   );
 });
