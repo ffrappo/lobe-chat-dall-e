@@ -3,7 +3,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-export default async function handler(req: NextRequest) {
+export async function POST(req: NextRequest) {
+    console.log ({req})
     if (req.method !== 'POST') {
         return new NextResponse('Method Not Allowed', { status: 405 });
     }
@@ -26,11 +27,6 @@ export default async function handler(req: NextRequest) {
             },
         });
     } catch (error) {
-        return new NextResponse(JSON.stringify({ error: error.message }), {
-            status: 500,
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+        return NextResponse.json({ error: "something went wrong" }, { status: 500 });
     }
 }
