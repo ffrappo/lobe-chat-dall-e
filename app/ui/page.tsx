@@ -25,9 +25,11 @@ const Daje = memo(() => {
         <div>
           <a href={data ? data.image_url : 'https://user-images.githubusercontent.com/20684618/31289519-9ebdbe1a-aae6-11e7-8f82-bf794fdd9d1a.png'}
              target="_blank" rel="noopener noreferrer">
-            <img className="w-full h-60 object-cover"
+            <img className="w-full h-60 object-cover rounded"
                  src={data ? data.image_url : 'https://user-images.githubusercontent.com/20684618/31289519-9ebdbe1a-aae6-11e7-8f82-bf794fdd9d1a.png'}
-                 alt="Generated" />
+                 alt="Generated" 
+                 style={{height: 300}}
+                 />
           </a>
         </div>
       </div>
