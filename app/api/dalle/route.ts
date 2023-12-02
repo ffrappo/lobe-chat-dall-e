@@ -1,24 +1,20 @@
-// api/dalle.ts
+// api/dalle/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
+import { serialize } from 'v8';
 
+export const config = {
+    runtime: 'experimental-edge',
+};
 
-export async function POST(request: NextRequest) {
-    // if (req.method !== 'POST') {
-    //     res.status(405).json({ error: 'Method not allowed' });
-    //     return;
-    // }
-    console.log({request})
+export default async function handler(request: NextRequest) {
+    if (request.method !== 'POST') {
+        return new NextResponse(null, { status: 405, statusText: 'Method Not Allowed' + serialize(request) });
+    }
 
+    const prompt = await request.json();
 
-    const prompt = await request.json()
-    console.log({prompt})
-
-
-    const openai = new OpenAI()
-
-
-
+    const openai = new OpenAI();
 
     try {
         const response = await openai.images.generate({
@@ -32,6 +28,6 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({ image_url });
     } catch (error: any) {
-        return NextResponse.json({ error: error.message }, { status: 500 })
+        return new NextResponse(JSON.stringify({ error: error.message }), { status: 500 });
     }
 }
