@@ -19,7 +19,8 @@
     "identifier": "lobe-dalle",
     "ui": {
       "url": "https://lobe-chat-dall-e.vercel.app/ui",
-      "height": 400
+      "height": 360,
+      "width": 360
     },
     "version": "2"
   }
