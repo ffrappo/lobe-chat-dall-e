@@ -21,9 +21,9 @@ const Daje = memo(() => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="bg-white shadow-xl rounded-lg overflow-hidden">
+      <div className="shadow-xl rounded-lg overflow-hidden">
         <div>
-          <a href={imageSrc} target="_blank" rel="noopener noreferrer">
+          <a href={imageSrc} target="_blank">
             <img className="w-full max-h-75 object-cover rounded-t-lg"
                  src={imageSrc}
                  alt="Generated" 
@@ -32,9 +32,8 @@ const Daje = memo(() => {
           </a>
         </div>
         <div className="p-4">
-          <a href={imageSrc} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-gray-500 hover:text-gray-800">
-            <span>View Image</span>
-            <LinkIcon className="ml-1 w-4 h-4" />
+          <a href={imageSrc} target="_blank" className="flex items-center text-sm text-gray-500 hover:text-gray-800">
+            <span>View Image <LinkIcon className="ml-1 w-4 h-4" style={{width: '10px', position: 'relative', top: '-3px'}} /></span>
           </a>
         </div>
       </div>
