@@ -18,16 +18,11 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: transparent;
 }
 
 .loader {
-  border-top-color: #3498db; /* Use a color that matches your theme */
+  border-top-color: #3498db; 
   animation: spin 1s ease-in-out infinite;
 }
 
