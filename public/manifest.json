@@ -1,0 +1,25 @@
+{
+    "api": [
+      {
+        "url": "http://localhost:3000/api/dalle",
+        "name": "generateImage",
+        "description": "Generate images based on prompts using DALL-E",
+        "parameters": {
+          "properties": {
+            "prompt": {
+              "description": "Text prompt to generate the image",
+              "type": "string"
+            }
+          },
+          "required": ["prompt"],
+          "type": "object"
+        }
+      }
+    ],
+    "identifier": "lobe-dalle",
+    "ui": {
+      "url": "http://localhost:3000",
+      "height": 200
+    },
+    "version": "1"
+  }

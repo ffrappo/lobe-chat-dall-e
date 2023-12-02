@@ -1,27 +1,27 @@
 {
-  "name": "lobe-chat-dall-e",
-  "version": "0.0.1",
-  "description": "testing integration of dall-e with lobe chat",
-  "main": "index.js",
+  "name": "lobe-dalle",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ffrappo/lobe-chat-dall-e.git"
+  "dependencies": {
+    "axios": "^0.27.2",
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18"
   },
-  "keywords": [
-    "lobe-chat",
-    "dall-e-3"
-  ],
-  "author": "ffrappo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ffrappo/lobe-chat-dall-e/issues"
-  },
-  "homepage": "https://github.com/ffrappo/lobe-chat-dall-e#readme",
   "devDependencies": {
-    "axios": "^1.6.2",
-    "form-data": "^4.0.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.16",
+    "openai": "^4.20.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5"
   }
 }
