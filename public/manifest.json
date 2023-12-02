@@ -18,7 +18,7 @@
     ],
     "identifier": "lobe-dalle",
     "ui": {
-      "url": "http://localhost:3000",
+      "url": "https://lobe-chat-dall-e.vercel.app/ui",
       "height": 200
     },
     "version": "2"

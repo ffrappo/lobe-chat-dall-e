@@ -1,5 +1,6 @@
+'use client'
 import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
-import { memo, useEffect, useState } from 'react';
+import { memo } from 'react';
 
 const Daje = memo(() => {
   const { data, loading } = useWatchPluginMessage();
