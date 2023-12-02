@@ -4,12 +4,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
 export async function POST(req: NextRequest) {
-    console.log ({req})
+
     if (req.method !== 'POST') {
         return new NextResponse('Method Not Allowed', { status: 405 });
     }
 
     const body = await req.json();
+    console.log({body})
     const openai = new OpenAI();
 
     try {
