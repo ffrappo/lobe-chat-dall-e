@@ -10,14 +10,21 @@ export async function POST(req: NextRequest) {
     // }
 
     const body = await req.json();
+    console.log({body})
 
     const openai = new OpenAI();
 
     try {
         const imageResponse = await openai.images.generate({
             model: "dall-e-3",
-            prompt: body.prompt
+            prompt: body.prompt,
+            n: 1,
+            quality: 'hd',
+            response_format: 'url',
+            style: 'natural',
         });
+
+        console.log({imageResponse})
 
         const image_url = imageResponse.data[0].url;
 
