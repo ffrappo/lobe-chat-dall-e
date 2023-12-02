@@ -3,9 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
 import { serialize } from 'v8';
 
-export const config = {
-    runtime: 'experimental-edge',
-};
+export const runtime = "experimental-edge"
 
 export default async function handler(request: NextRequest) {
     console.log({request})
