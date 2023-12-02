@@ -8,6 +8,7 @@ export const config = {
 };
 
 export default async function handler(request: NextRequest) {
+    console.log({request})
     if (request.method !== 'POST') {
         return new NextResponse(null, { status: 405, statusText: 'Method Not Allowed' + serialize(request) });
     }
