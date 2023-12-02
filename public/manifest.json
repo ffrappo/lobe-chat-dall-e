@@ -1,7 +1,7 @@
 {
     "api": [
       {
-        "url": "http://localhost:3000/api/dalle",
+        "url": "https://lobe-chat-dall-e.vercel.app/api/dalle",
         "name": "generateImage",
         "description": "Generate images based on prompts using DALL-E",
         "parameters": {
