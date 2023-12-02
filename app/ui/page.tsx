@@ -33,7 +33,7 @@ const Daje = memo(() => {
         </div>
         <div className="p-4">
           <a href={imageSrc} target="_blank" className="flex items-center text-sm text-gray-500 hover:text-gray-800">
-            <span>View Image <LinkIcon className="ml-1 w-4 h-4" style={{width: '10px', position: 'relative', top: '-3px'}} /></span>
+            <span>View Image <LinkIcon className="ml-1 w-4 h-4" style={{width: '10px', display: 'inline-block', position: 'relative', top: '-3px'}} /></span>
           </a>
         </div>
       </div>
